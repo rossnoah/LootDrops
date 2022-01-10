@@ -44,18 +44,27 @@ public class DropCommand implements CommandExecutor {
             z= z+(int)(Math.random()*160)+ 120;
         }
         int countdown = countdownDuration;
+
+
+        int xOffset = x + (int)(Math.random()*20);
+        int zOffset = z + (int)(Math.random()*20);
+        int yOffset = y + (int)(Math.random()*5);
+
+
+
+
         String str1 = ChatColor.GOLD + "" + ChatColor.BOLD + "Loot drop in ";
 
-        String str2 = ChatColor.GOLD + "" + ChatColor.BOLD + " minutes at ("
-                + x + "," + y + "," + z + ")";
+        String str2 = ChatColor.GOLD + "" + ChatColor.BOLD + " minutes near ("
+                + xOffset + "," + yOffset + "," + zOffset + ")";
 
-        String str3 = ChatColor.GOLD + "" + ChatColor.BOLD + " minutes at ("
-                + x + "," + y + "," + z + ")";
+        String str3 = ChatColor.GOLD + "" + ChatColor.BOLD + " minutes near ("
+                + xOffset + "," + yOffset + "," + zOffset + ")";
 
-        String str4 = ChatColor.GOLD + "" + ChatColor.BOLD + " seconds at ("
-                + x + "," + y + "," + z + ")";
-        String str5 = ChatColor.GOLD + "" + ChatColor.BOLD + " seconds at ("
-                + x + "," + y + "," + z + ")";
+        String str4 = ChatColor.GOLD + "" + ChatColor.BOLD + " seconds near ("
+                + xOffset + "," + yOffset + "," + zOffset + ")";
+        String str5 = ChatColor.GOLD + "" + ChatColor.BOLD + " seconds near ("
+                + xOffset + "," + yOffset + "," + zOffset + ")";
 
 
         announce(str1 + 5 + str2);
@@ -90,29 +99,27 @@ public class DropCommand implements CommandExecutor {
 
         }, 5400);
 
-        for (int i = 1; i < 10; i++) {
-            int finalI = 10 - i;
+
 
             Bukkit.getScheduler().scheduleSyncDelayedTask(plugin, () -> {
 
-                if (finalI == 1) {
-                    announce(str1 + finalI + str5);
 
-                } else {
-
-                    announce(str1 + finalI + str4);
-                }
+               announce(str1 + "10" + str4);
 
 
-            }, 20 * i + 5800);
 
 
-            //  Bukkit.getScheduler().scheduleSyncDelayedTask(plugin, () -> {
-            //          spawnLoot(x,y,z);
-            // }, 500);
+            },5800);
+
+        Bukkit.getScheduler().scheduleSyncDelayedTask(plugin, () -> {
+            announce(str1 + "5" + str4);
+        },5900);
+
+        Bukkit.getScheduler().scheduleSyncDelayedTask(plugin, () -> {
+            announce(str1 + "3" + str4);
+        },5940);
 
 
-        }
 
 
     }
