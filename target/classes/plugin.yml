@@ -1,0 +1,8 @@
+name: LootDrops
+version: '1.0'
+main: net.vanillaplus.lootdrops.Main
+api-version: 1.17
+commands:
+  lootdrop:
+    usage: /<command>
+    permission: lootdrop.drop
