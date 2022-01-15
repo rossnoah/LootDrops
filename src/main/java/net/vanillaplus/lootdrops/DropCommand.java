@@ -32,16 +32,16 @@ public class DropCommand implements CommandExecutor {
 
         int x = centerX;
         if(random.nextBoolean()){
-            x= x+(int)(Math.random()*160)+ 120;
+            x= x+(int)(Math.random()*80)+ 90;
         }else{
-            x = x-(int)(Math.random()*160)+ 120;
+            x = x-(int)(Math.random()*80)+ 90;
         }
 
         int z = centerZ;
         if(random.nextBoolean()){
-            z= z +(int)(Math.random()*160)+ 120;
+            z= z +(int)(Math.random()*80)+ 90;
         }else{
-            z= z+(int)(Math.random()*160)+ 120;
+            z= z+(int)(Math.random()*80)+ 90;
         }
         int countdown = countdownDuration;
 
