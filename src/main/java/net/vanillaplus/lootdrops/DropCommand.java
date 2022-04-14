@@ -32,16 +32,16 @@ public class DropCommand implements CommandExecutor {
 
         int x = centerX;
         if(random.nextBoolean()){
-            x= x+(int)(Math.random()*80)+ 90;
+            x= x+(int)(Math.random()*80)+ 60;
         }else{
-            x = x-(int)(Math.random()*80)+ 90;
+            x = x-(int)(Math.random()*80)+ 60;
         }
 
         int z = centerZ;
         if(random.nextBoolean()){
-            z= z +(int)(Math.random()*80)+ 90;
+            z= z +(int)(Math.random()*80)+ 60;
         }else{
-            z= z+(int)(Math.random()*80)+ 90;
+            z= z+(int)(Math.random()*80)+ 60;
         }
         int countdown = countdownDuration;
 
@@ -53,17 +53,17 @@ public class DropCommand implements CommandExecutor {
 
 
 
-        String str1 = ChatColor.GOLD + "" + ChatColor.BOLD + "Loot drop in ";
+        String str1 = ChatColor.GOLD + "" + "Loot drop in ";
 
-        String str2 = ChatColor.GOLD + "" + ChatColor.BOLD + " minutes near ("
+        String str2 = ChatColor.GOLD + "" + " minutes near ("
                 + xOffset + "," + yOffset + "," + zOffset + ")";
 
-        String str3 = ChatColor.GOLD + "" + ChatColor.BOLD + " minutes near ("
+        String str3 = ChatColor.GOLD + "" + " minutes near ("
                 + xOffset + "," + yOffset + "," + zOffset + ")";
 
-        String str4 = ChatColor.GOLD + "" + ChatColor.BOLD + " seconds near ("
+        String str4 = ChatColor.GOLD + "" + " seconds near ("
                 + xOffset + "," + yOffset + "," + zOffset + ")";
-        String str5 = ChatColor.GOLD + "" + ChatColor.BOLD + " seconds near ("
+        String str5 = ChatColor.GOLD + ""  + " seconds near ("
                 + xOffset + "," + yOffset + "," + zOffset + ")";
 
 
