@@ -7,6 +7,7 @@ import org.bukkit.entity.Player;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.plugin.java.JavaPlugin;
 
+import java.util.Date;
 import java.util.Locale;
 import java.util.Random;
 
@@ -29,17 +30,19 @@ public final class Main extends JavaPlugin {
     public void onEnable() {
         // Plugin startup logic
 
-
+        SchedulerUtils.setPlugin(this);
         this.getCommand("lootdrop").setExecutor(new DropCommand());
 
-
+/*
         SchedulerUtils.runLater(()->{
             runLootDrop();
             SchedulerUtils.runRepeating(()->{
                 runLootDrop();
-            },20*60*55,20*60*60l);
+            },20*60*60*2,20*60*60l*2);
 
-        },20*60*5);
+        },20*60*30);
+
+ */
 
     }
 
