@@ -32,11 +32,25 @@ public final class Main extends JavaPlugin {
 
         this.getCommand("lootdrop").setExecutor(new DropCommand());
 
+
+        SchedulerUtils.runLater(()->{
+            runLootDrop();
+            SchedulerUtils.runRepeating(()->{
+                runLootDrop();
+            },20*60*55,20*60*60l);
+
+        },20*60*5);
+
     }
 
     @Override
     public void onDisable() {
         // Plugin shutdown logic
+    }
+
+    private void runLootDrop(){
+        String command = "lootdrop";
+        Bukkit.dispatchCommand(Bukkit.getConsoleSender(),command);
     }
 
 
@@ -59,33 +73,33 @@ public final class Main extends JavaPlugin {
         ItemStack[] loot = {
                 new ItemStack(Material.TOTEM_OF_UNDYING),
                 new ItemStack(Material.TOTEM_OF_UNDYING),
-                new ItemStack(Material.EXPERIENCE_BOTTLE,64),
-                new ItemStack(Material.GLOWSTONE,16),
-                new ItemStack(Material.END_CRYSTAL,64),
-                new ItemStack(Material.GLOWSTONE,16),
-                new ItemStack(Material.EXPERIENCE_BOTTLE,64),
+                new ItemStack(Material.EXPERIENCE_BOTTLE,16),
+                new ItemStack(Material.GLOWSTONE,4),
+                new ItemStack(Material.END_CRYSTAL,8),
+                new ItemStack(Material.GLOWSTONE,4),
+                new ItemStack(Material.EXPERIENCE_BOTTLE,16),
                 new ItemStack(Material.TOTEM_OF_UNDYING),
                 new ItemStack(Material.TOTEM_OF_UNDYING),
 
 
                 new ItemStack(Material.TOTEM_OF_UNDYING),
                 new ItemStack(Material.TOTEM_OF_UNDYING),
-                new ItemStack(Material.GOLDEN_APPLE,16),
-                new ItemStack(Material.NETHERITE_INGOT,2),
-                new ItemStack(Material.RESPAWN_ANCHOR,64),
-                new ItemStack(Material.NETHERITE_INGOT,2),
-                new ItemStack(Material.GOLDEN_APPLE,16),
+                new ItemStack(Material.GOLDEN_APPLE,4),
+                new ItemStack(Material.NETHERITE_INGOT,1),
+                new ItemStack(Material.RESPAWN_ANCHOR,8),
+                new ItemStack(Material.NETHERITE_INGOT,1),
+                new ItemStack(Material.GOLDEN_APPLE,4),
                 new ItemStack(Material.TOTEM_OF_UNDYING),
                 new ItemStack(Material.TOTEM_OF_UNDYING),
 
 
                 new ItemStack(Material.TOTEM_OF_UNDYING),
                 new ItemStack(Material.TOTEM_OF_UNDYING),
-                new ItemStack(Material.EXPERIENCE_BOTTLE,64),
-                new ItemStack(Material.GLOWSTONE,16),
-                new ItemStack(Material.END_CRYSTAL,64),
-                new ItemStack(Material.GLOWSTONE,16),
-                new ItemStack(Material.EXPERIENCE_BOTTLE,64),
+                new ItemStack(Material.EXPERIENCE_BOTTLE,16),
+                new ItemStack(Material.GLOWSTONE,4),
+                new ItemStack(Material.END_CRYSTAL,8),
+                new ItemStack(Material.GLOWSTONE,4),
+                new ItemStack(Material.EXPERIENCE_BOTTLE,16),
                 new ItemStack(Material.TOTEM_OF_UNDYING),
                 new ItemStack(Material.TOTEM_OF_UNDYING),
 
