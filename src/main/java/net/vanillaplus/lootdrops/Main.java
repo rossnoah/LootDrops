@@ -7,6 +7,7 @@ import org.bukkit.entity.Player;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.plugin.java.JavaPlugin;
 
+import java.util.ArrayList;
 import java.util.Date;
 import java.util.Locale;
 import java.util.Random;
@@ -14,7 +15,7 @@ import java.util.Random;
 
 public final class Main extends JavaPlugin {
 
-
+    public static ArrayList<Block> blocks = new ArrayList<>();
 
     static boolean active;
 
@@ -32,6 +33,7 @@ public final class Main extends JavaPlugin {
 
         SchedulerUtils.setPlugin(this);
         this.getCommand("lootdrop").setExecutor(new DropCommand());
+        Bukkit.getPluginManager().registerEvents(new BlockBreakListener(),this);
 
 /*
         SchedulerUtils.runLater(()->{
@@ -152,7 +154,10 @@ public final class Main extends JavaPlugin {
         dropBlock.getRelative(0,-1,-1).setType(Material.CRYING_OBSIDIAN);
         dropBlock.getRelative(0,-1,1).setType(Material.CRYING_OBSIDIAN);
 
-
+        blocks.add(dropBlock);
+        SchedulerUtils.runLater(()->{
+            blocks.remove(dropBlock);
+        },20*60);
 
     }
 
