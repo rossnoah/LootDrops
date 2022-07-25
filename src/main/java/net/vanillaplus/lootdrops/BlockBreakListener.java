@@ -23,7 +23,9 @@ public class BlockBreakListener implements Listener {
     public void onBlockExplode(BlockExplodeEvent e){
         for(Block b:e.blockList()){
             if(Main.blocks.contains(b)){
-                e.blockList().remove(b);
+                if(e.blockList().contains(b)){
+                    e.blockList().remove(b);
+                }
             }
         }
     }
@@ -32,7 +34,9 @@ public class BlockBreakListener implements Listener {
     public void onEntityExplode(EntityExplodeEvent e){
         for(Block b:e.blockList()){
             if(Main.blocks.contains(b)){
-                e.blockList().remove(b);
+                if(e.blockList().contains(b)) {
+                    e.blockList().remove(b);
+                }
             }
         }
     }
