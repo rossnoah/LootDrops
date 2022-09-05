@@ -71,7 +71,7 @@ public class DropCommand implements CommandExecutor {
 
         //Run command as console
         Bukkit.dispatchCommand(Bukkit.getConsoleSender(), "discordsrv:discordsrv broadcast #1016111922288021524 <@&1016386237306777731> **Loot drop spawning in 5 minutes near ("+xOffset+","+yOffset+","+zOffset+")**");
-        Bukkit.dispatchCommand(Bukkit.getConsoleSender(), "discordsrv:discordsrv broadcast #1016111922288021524 https://cdn.discordapp.com/attachments/756260642293547008/1016120022885732472/unknown.png");
+        // Bukkit.dispatchCommand(Bukkit.getConsoleSender(), "discordsrv:discordsrv broadcast #1016111922288021524 https://cdn.discordapp.com/attachments/756260642293547008/1016120022885732472/unknown.png");
 
 
         for (int i = 1; i < 6; i++) {
