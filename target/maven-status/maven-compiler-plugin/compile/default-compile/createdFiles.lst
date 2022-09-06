@@ -1,4 +1,5 @@
 net/vanillaplus/lootdrops/SchedulerUtils.class
+net/vanillaplus/lootdrops/MultiDropCommand.class
 net/vanillaplus/lootdrops/Main.class
 net/vanillaplus/lootdrops/DropCommand.class
 net/vanillaplus/lootdrops/BlockBreakListener.class

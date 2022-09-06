@@ -1,5 +1,5 @@
 name: LootDrops
-version: '1.1'
+version: '1.2'
 main: net.vanillaplus.lootdrops.Main
 softdepend:
   - DiscordSRV
@@ -8,3 +8,7 @@ commands:
   lootdrop:
     usage: /<command>
     permission: lootdrop.drop
+
+  multidrop:
+    usage: /<command>
+    permission: lootdrop.multidrop
