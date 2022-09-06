@@ -8,3 +8,7 @@ commands:
   lootdrop:
     usage: /<command>
     permission: lootdrop.drop
+
+  multidrop:
+    usage: /<command>
+    permission: lootdrop.multidrop

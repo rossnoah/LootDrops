@@ -33,6 +33,9 @@ public final class Main extends JavaPlugin {
 
         SchedulerUtils.setPlugin(this);
         this.getCommand("lootdrop").setExecutor(new DropCommand());
+        this.getCommand("multidrop").setExecutor(new MultiDropCommand());
+
+
         Bukkit.getPluginManager().registerEvents(new BlockBreakListener(),this);
 
 /*
