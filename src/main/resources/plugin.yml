@@ -12,3 +12,7 @@ commands:
   multidrop:
     usage: /<command>
     permission: lootdrop.multidrop
+
+  delayeddrop:
+    usage: /<command>
+    permission: lootdrop.delayeddrop

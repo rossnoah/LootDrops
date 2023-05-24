@@ -1,0 +1,24 @@
+items:
+  - "TOTEM_OF_UNDYING:1"
+  - "EXPERIENCE_BOTTLE:16"
+  - "GLOWSTONE:8"
+  - "END_CRYSTAL:4"
+  - "GOLDEN_APPLE:4"
+  - "NETHERITE_INGOT:1"
+  - "RESPAWN_ANCHOR:4"
+#item:amount
+
+probabilities:
+#0-1
+  - 0.2
+  - 0.2
+  - 0.2
+  - 0.2
+  - 0.2
+  - 0.2
+  - 0.2
+
+
+
+
+
